@@ -26,14 +26,17 @@
   }
 
   function filterRecords (ar, key, val) {
-    return _.filter(ar, function (instance.key) {
-      return instance.key != val;
+
+    array = [];
+
+    _.each(ar, function (instance) {
+      if (ar.key == val) {
+        array.push(ar.instance);
+      }
     })
   }
 
-  console.log(records.length);
-  console.log(filterRecords(arr, 'survived', 0).length);
-
+  console.log(filterRecords(records, 'sex', 'male'));
 
 
 
